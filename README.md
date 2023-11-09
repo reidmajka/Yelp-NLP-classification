@@ -2,7 +2,7 @@
 ## Background & Objectives
 The power of crowdsourced information and reviews can be utilized to help businesses thrive in the communities they choose to set themselves in. Popular platforms like Yelp, Twitter, Foursquare etc. allow the community to provide their input on establishments once limited to word-of-mouth and surveys conducted by either the businesses themselves, or community organizations - both of which inherently will result in bias, lack of extensive data, and actionable insights. While the internet introduces nuances with anonymization and noise, large datasets can help indicate trends from community input that may help businesses change structure in order to avoid a shutdown.
 
-Objective: 
+### Objective: 
 *  create models to identify reviews that are associated with companies that have since gone out of business
 *  retrieve business and review data for a given region defined as in scope for a Business Development consulting firm
 *  identify characteristics of businesses in that area that are succeeding and apply to similar companies at risk of default
@@ -17,7 +17,7 @@ in order to train these various Machine Learning models, open-source data provid
 The open-source data files contain different JSON files that are inter-linked, including more than six million reviews for over 100k businesses, all throughout the United States. 
 
 ## Modeling process
-#### NLP Classification Model on Yelp Reviews
+### NLP Classification Model on Yelp Reviews
 The first model required training a Machine Learning classification model on reviews data, using the feature "is_open" as our target variable. This indicates, for all the business ID's in the dataset, if the business (as of July 2023) is still open. While there are a few practicality issues with the dataset, we will assume for this project that there were no external factors to a business closing outside of business performance (i.e., that the pandemic did not happen in this universe). For X-features, the reviews were used, along with the reiew rating, average business rating, and review count for the business in question for each review.
 
 The process to determine optimal model results is as follows:
@@ -29,14 +29,17 @@ The process to determine optimal model results is as follows:
 
 6.  A test model fit was done on the entire dataset. Time restraints allowed this to be run once, with just the review text, using a Hashing Vectorizer that did not allow the token features to be identified (due to a local memory issue), and resulted in and AUC score of 0.61. For future improvement, the data and model can be fed into an external processing application like Google Colab, but for now will have to utilize the model in #5 above.
 
-#### Clustering model 
+### Clustering model 
+Using a KMeans clustering model and geographic data of businesses "at risk", determine where to focus efforts and determine if neighborhood characters factor into business success. This model is largely used as a reference.
 
 ## Output and Recommendations
 (placeholder for case example: Philadelphia metro)
 
 ## Next steps
-<<<<<<< HEAD
-Given the resources available to 
-=======
-Given the resources available to 
->>>>>>> b26132eccb75b2f56c17291e63a67d077a1b56bf
+Given the resources available to complete the first pass of the project, next steps include:
+*  applying connection to Yelp API to do live searches on all businesses
+*  include user features to determine clintele associated with successful businesses
+*  apply external datasets associated with community attributes (neighborhood businesses, residents, regional attributes etc.) to better investigate which factors attribute to business issues
+
+### Sources
+Yelp dataset: https://www.yelp.com/dataset
