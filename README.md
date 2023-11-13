@@ -1,5 +1,7 @@
 # Providing Insights for Business Development
 
+![crowdsourced stock imagery](readme-images/readme-header.png)
+
 *Using data derived from social media companies that empower crowd-sourced information and insights, is it possible to find trends in texts that indicate a need for business improvement? Can we develop text classification models that can unearth trends otherwise manually compiled from individual posts and reviews? Utilizing review and business data from Yelp, we are looking to train a language model on businesses that are both open and have closed, apply to currently running businesses, and focus on falsely-classified closed businesses to see if there are trends in the reviews that hint at upcoming issues.*
 
 ## Background & Objectives
@@ -27,7 +29,7 @@ The process to determine optimal model results is as follows:
 1.  the initial GridSearchCV will cover the following: two forms of text preprocessing (Stemming and Lemmatization), two forms of vectorization (Count Vectorization and Tf-Idf Vectorization), and five different ML classification models (Logistic Regression, Decision Tree, Random Forest, Multinomial Naïve Bayes, Gradient Boosting)
 2.  Given the large amount of data, take a small sample `(n=1,000)` to perform a GridSearchCV on all combinations of the above Pipeline objects
   a.  the resulting data showed that the top text preprocessor was through Stemming, vectorization through CountVec, and models using Decision Tree and Gradient Boosted trees
-4.  The top performing objexts from the `n=1,000` iteration were applied to a larger dataset, this time a sample of the total dataframe of n=10,000. The same process was followed, showing improving scores for all iterations.
+4.  The top performing objexts from the `n=1,000` iteration were applied to a larger dataset, this time a sample of the total dataframe of `n=10,000`. The same process was followed, showing improving scores for all iterations.
 5.  the final iteration used a Gradient-Boosted Trees model, on stemmed data fed through a Count Vectorizer. the final (and best) AUC score was recorded at 0.77.
 
 6.  A test model fit was done on the entire dataset. Time restraints allowed this to be run once, with just the review text, using a Hashing Vectorizer that did not allow the token features to be identified (due to a local memory issue), and resulted in and AUC score of 0.61. For future improvement, the data and model can be fed into an external processing application like Google Colab, but for now will have to utilize the model in #5 above.
@@ -36,7 +38,7 @@ The process to determine optimal model results is as follows:
 Using a KMeans clustering model and geographic data of businesses "at risk", determine where to focus efforts and determine if neighborhood characters factor into business success. This model is largely used as a reference.
 
 ## Output and Recommendations
-(placeholder for case example: Philadelphia metro)
+Overall, while the NLP classification model is working in theory at 0.77 AUC, applying to unseen reviews and assessing trends in the texts provided to be not as helpful as imagined. This makes sense, in that there are likely many different factors that play into a business's demise than just the reviews provided by consumers (a big note in this use case is that 2023 closed businesses will likely include closures due to the pandemic, for example). While it certainly helps to understand the trends within community-sourced data, a more robust model would include many other features that depend on business demographics.
 
 ## Next steps
 Given the resources available to complete the first pass of the project, next steps include:
