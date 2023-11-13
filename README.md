@@ -43,3 +43,11 @@ Given the resources available to complete the first pass of the project, next st
 
 ### Sources
 Yelp dataset: https://www.yelp.com/dataset
+
+### Reproduction 
+
+To obtain the dataset, download json files at above URL, and run the notebooks in following order:
+1.  Yelp-NLP-preprocessing
+2.  Yelp-NLP-classification
+3.  Yelp-KNN-visualization
+4.  Wordcloud-Notebook
