@@ -1,4 +1,7 @@
 # Providing Insights for Business Development
+
+*Using data derived from social media companies that empower crowd-sourced information and insights, is it possible to find trends in texts that indicate a need for business improvement? Can we develop text classification models that can unearth trends otherwise manually compiled from individual posts and reviews? Utilizing review and business data from Yelp, we are looking to train a language model on businesses that are both open and have closed, apply to currently running businesses, and focus on falsely-classified closed businesses to see if there are trends in the reviews that hint at upcoming issues.*
+
 ## Background & Objectives
 The power of crowdsourced information and reviews can be utilized to help businesses thrive in the communities they choose to set themselves in. Popular platforms like Yelp, Twitter, Foursquare etc. allow the community to provide their input on establishments once limited to word-of-mouth and surveys conducted by either the businesses themselves, or community organizations - both of which inherently will result in bias, lack of extensive data, and actionable insights. While the internet introduces nuances with anonymization and noise, large datasets can help indicate trends from community input that may help businesses change structure in order to avoid a shutdown.
 
