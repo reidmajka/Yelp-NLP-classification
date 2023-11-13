@@ -44,6 +44,12 @@ Using a KMeans clustering model and geographic data of businesses "at risk", det
 ## Output and Recommendations
 Overall, while the NLP classification model is working in theory at 0.77 AUC, applying to unseen reviews and assessing trends in the texts provided to be not as helpful as imagined. This makes sense, in that there are likely many different factors that play into a business's demise than just the reviews provided by consumers (a big note in this use case is that 2023 closed businesses will likely include closures due to the pandemic, for example). While it certainly helps to understand the trends within community-sourced data, a more robust model would include many other features that depend on business demographics.
 
+For example, when classifying the unseen Philadelphia Metro area reviews and assessing the false negatives, the trends in review and tip texts did not seem to be very useful:
+
+![Sample Review Text Wordcloud](readme_images/review-text-trends.png)
+
+![Sample Tip Text Wordcloud](readme_images/tip-text-trends.png)
+
 ## Next steps
 Given the resources available to complete the first pass of the project, next steps include:
 *  applying connection to Yelp API to do live searches on all businesses
