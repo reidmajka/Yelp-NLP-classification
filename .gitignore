@@ -11,7 +11,6 @@ __pycache__/
 *.csv 
 *.gz
 *.db
-*.jpg
 *.json
 *.pkl
 zippedData/
