@@ -1,0 +1,17 @@
+pandas
+numpy
+json
+sqlite3
+pickle
+scipy
+joblib
+sklearn
+plotly
+matplotlib
+wordcloud
+ipywidgets
+IPython
+ipyleaflet
+shapely
+streamlit_folium
+streamlit
